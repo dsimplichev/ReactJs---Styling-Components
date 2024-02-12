@@ -59,10 +59,10 @@ export default function AuthInputs() {
           />
         </p>
         <p>
-          <Label invalid={emailNotValid}>Password</Label>
+          <Label invalid={passwordNotValid}>Password</Label>
           <Input
             type="password"
-            className={passwordNotValid ? 'invalid' : undefined}
+            invalid={passwordNotValid}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
